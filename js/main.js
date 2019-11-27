@@ -106,10 +106,14 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [30.5803385,31.512396],
-        zoom: 12,
+        center: [30.4891382,31.3587897],
+        zoom: 7.5,
         scrollWheelZoom: true,
         layers: [grayscale,satalite,streets],
+        fullscreenControl: true,
+          fullscreenControlOptions:{
+                position: 'topleft'
+            },
         mapboxToken: 'pk.eyJ1IjoibW9zdGFmYWFpb3VwIiwiYSI6ImNqenoxZ203YTF0NTgzbm1qZG5nbXd3OXAifQ.9SdYXaCabPwO25xyAYKByA'
       });
 
@@ -192,7 +196,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = restaurant.photograph;
   image.alt = 'Image of ' + restaurant.name + ' restaurant';
   link.append(image);
 
@@ -241,35 +245,23 @@ restaurantRating = (restaurant) => {
   return rating;
 };
 
-
+var x=1;
 
 /**
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+  
   restaurants.forEach(restaurant => {
-    // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
-    marker.on("click", onClick);
-    marker.bindPopup(`<b id="popupname">${restaurant.name}</b><br><img id="popupimg" src="${DBHelper.imageUrlForRestaurant(restaurant)}" width="150" height="100" alt="${restaurant.name}"><br>`).openPopup();
-
-
-    function onClick() {
-      // window.location.href = marker.options.url;
-
-      ///////////////////////////// popup //////////////////////////////////////
-      // marker.bindPopup('<b>Hello world!</b><br>I am a popup.<br> <button id="popup">addd</button>').openPopup();
-      // marker.setContent(e.latlng.toString() + '<a href="http://www.google.com">Visit Google</a>"')
-
-        //  var popup = document.querySelector("#popup");
-
-        //  popup.addEventListener('click',function(){
-        //  window.location.href = marker.options.url
-        //  })
-
-      
-
-    }
+    marker.bindPopup(`<b id="popupname">${restaurant.name}</b><br><img id="popupimg" src="${restaurant.photograph}" width="150" height="100" alt="${restaurant.name}"><br><a href="restaurant.html?id=${restaurant.id}"><button id="popuplink">Go Visit</button></a>`).openPopup();
     self.markers.push(marker);
   });
 }
+console.log(markers);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+

@@ -90,7 +90,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
-  image.style.backgroundImage = `url('${DBHelper.imageUrlForRestaurant(restaurant)}')`;
+  image.style.backgroundImage = `url('${restaurant.photograph}')`;
   image.setAttribute('aria-label', 'Image ' + restaurant.name + ' restaurant, ');
   image.setAttribute('alt', 'Image ' + restaurant.name + ' restaurant, ');
   // image.tabIndex = '2';

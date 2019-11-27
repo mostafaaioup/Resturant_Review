@@ -20,14 +20,14 @@ body {
 	background-color: #fff;
 	margin: 0;
 	position: relative;
-	color: #1833ab;
+	/* color: #1833ab; */
   overflow-x: hidden;
 }
 .home main {
 	margin-top: 3em;
 }
 .inside main {
-	margin-top: 6em;
+	margin-top: 3em;
 }
 
 a {
@@ -58,6 +58,11 @@ hr {
 	border: none;
   border-bottom: 0.05em solid #333;
 }
+#popuplink{
+  padding: 3px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
 
 article,
 aside,
@@ -85,7 +90,8 @@ header {
 }
 
 #maincontent {
-  background-color: green;
+  /* background-color: green; */
+  background-color:#3b0a44;
   min-height: 100%;
 }
 #footer {
@@ -121,7 +127,7 @@ nav {
 	justify-content: space-between;
 }
 .logo {
-	color: #1833ab;
+	color: #3b0a44;
 }
 .logo h1 {
 	font-family: "Montserrat", sans-serif;
@@ -138,7 +144,7 @@ nav {
 	height: 100%;
 }
 .logo:hover {
-	color: #ed1E79
+	color: #3b0a44
 }
 
 
@@ -148,7 +154,7 @@ nav {
 .filter-options {
   align-items: center;
 	display: inline-flex;
-	float: right;
+  float: right;
 }
 .filter-options h2 {
 	font-size: 1.1em;
@@ -156,7 +162,7 @@ nav {
   margin: 0 0 0 1em;
 }
 .filter-options select {
-	background-color: #1833ab;
+	background-color: #3b0a44;
 	color: #fff;
   font-family: Arial, sans-serif;
   font-size: 11pt;
@@ -171,8 +177,34 @@ nav {
 	border: 6px solid #fff;
 }
 
+#myInput{
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: 2px solid #3b0a44;
+  padding-left: 10px;
+  margin-right:100px;;
+}
+/* #cuisines-select{
+  border-radius: 5px;
+} */
+#neighborhoods-select, #cuisines-select{
 
+  border-radius: 5px;
+}
+ #cuisines-select:hover{
+  -webkit-box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
+-moz-box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
+box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
 
+}
+#neighborhoods-select:hover{
+  -webkit-box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
+-moz-box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
+box-shadow: 2px 7px 36px 0px rgba(78,9,156,1);
+}
 /* ====================== Map ====================== */
 
 
@@ -180,7 +212,8 @@ nav {
   height: 400px;
   width: 100%;
   background-color: #ccc;
-	z-index: 10;
+  z-index: 1;
+  
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -194,7 +227,7 @@ nav {
 	display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background-color: green;
+  background-color: #3b0a44;
 }
 #restaurants-list li {
   background-color: white;
@@ -204,6 +237,7 @@ nav {
   padding: 0;
   text-align: center;
   width: 280px;
+  border-radius: 15px;
 }
 
 
@@ -305,7 +339,7 @@ nav {
 
 #breadcrumb li {
   display: inline;
-  background-color: green;
+  background-color: #3b0a44;
   padding: 0.2em 1em 0.3em 0.5em;
   border-radius: 0.25em 2em 2em 0.25em;
 }
@@ -324,12 +358,19 @@ nav {
 #reviews-container {
   padding: 1em;
 }
-#restaurant-container h2,
+
 #reviews-container h2 {
-  color: green;
+  color: black;
   text-transform: uppercase;
 }
+/* #restaurant-container h2 .resname{
+  text-transform: uppercase;
+  color: white;
+} */
+/* .resname{
+  color: white;
 
+} */
 
 /* Restaurant Name & Rating */
 
@@ -341,11 +382,10 @@ nav {
   align-items: center;
 }
 #restaurant-name {
-  font-weight: 600;
   margin: 0 0.5em 0 0;
   text-transform: uppercase;
-  color: black;
-  padding: 3px;
+  color: white;
+  padding: 5px;
   border-radius: 15px;
   background-color: black;
 }
@@ -387,7 +427,7 @@ nav {
 
 #restaurant-img {
 	width: 100%;
-  height: 30vh;
+  height: 400px;
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center center;
@@ -441,9 +481,11 @@ nav {
   padding: 0.5em 0 1em;
   position: relative;
   width: 100%;
-  border:1px solid gray;
+  border:3px solid black;
   padding: 15px;
-  border-top: 15px solid black;
+  /* border-top: 15px solid black; */
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
 }
 /* #reviews-list li:last-child {
   border:1px solid gray;
@@ -451,7 +493,7 @@ nav {
   padding-bottom: 0;
 } */
 #reviews-list li p {
-  margin: 0 0 0.25em;
+  margin: 1em 1em 0.30em 1em;
 }
 #reviews-list li:hover{
  background-color: gray;
@@ -462,14 +504,23 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: #333;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  /* border-radius: 15px; */
 }
 .review-heading .name {
   font-size: 1.2em;
+  color: #eee;
 }
 .review-heading .date {
   font-size: 0.8em;
-  color: #333;
+  color: #eee;
   font-weight: 300;
+  margin-right: 50px;
 }
 
 
@@ -495,6 +546,7 @@ nav {
   top: 3em;
   width: 50%;
   float: right;
+  
 }
 .inside #map {
   background-color: #ccc;
@@ -503,7 +555,7 @@ nav {
 }
 li{
 
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 
@@ -540,17 +592,41 @@ li{
   #restaurant-hours td {
     display: table-header-group;
   }
+  .filter-options select {
+    width: 50%;
+   
+  }
+  .filter-options input{
+    width: 50%;
+  }
+ 
+}
+@media screen and (max-width: 600px) {
+  .filter-options h2 {
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+  #map{
+    position: relative;
+    margin-top: -65px;
+    height: 300px;
+  }
+  
 }
 
 @media screen and (max-width: 640px) {
   #restaurants-list li {
     width: 100%;
+    /* border-radius: 15px; */
   }
   .inside #map-container {
     position: static;
     width: 100%;
     height: 40vh;
     margin-bottom: 1em;
+    margin-top: 80px;
   }
   .inside .wrapper {
     width: 100%;
@@ -565,7 +641,7 @@ li{
   	margin-top: 6em;
   }
   .home header {
-    height: 6em;
+    height: 3em;
   }
   nav {
     height: 3em;
@@ -587,12 +663,20 @@ li{
   }
   .filter-options select {
     margin: 0.5em;
+    
   }
   #restaurants-list {
     justify-content: center;
   }
   #map {
-    height: 40vh;
+    height: 50vh;
+  }
+  #myInput{
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 2px solid #3b0a44;
+    padding-left: 10px;
+    margin-right:10px;;
   }
 }
 
@@ -600,6 +684,8 @@ li{
   .inside #map-container {
     left: 400px;
     width: calc(100% - 400px);
+
+    
   }
   .inside .wrapper {
     width: 400px;
@@ -622,6 +708,16 @@ li{
   }
 }
 
+@media screen and (max-width: 1020px)  {
+  #myInput{
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 2px solid #3b0a44;
+    padding-left: 10px;
+    margin-right:10px;;
+  }
+}
+
 @media screen and (min-width: 1221px) and (max-width: 1540px)  {
   .wrapper {
   	width: 1200px;
@@ -630,8 +726,8 @@ li{
     margin-right: 0;
   }
   #restaurant-img {
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    /* height: 280px; */
   }
 }
 
@@ -647,8 +743,8 @@ li{
     margin-right: 0;
   }
   #restaurant-img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    /* height: 400px; */
   }
 }
 
@@ -657,7 +753,7 @@ li{
 #popupname{
 
   /* text-align: center; */
-  color: green;
+  color: #3b0a44;
   font-size: 15px;
   /* margin-left: 60px; */
   /* padding: 60px; */
@@ -665,4 +761,141 @@ li{
 #popupimg{
 
   text-align: center;
+}
+
+.reviewcon{
+  width: 100%;
+  background-color: white;
+  border: 2px black solid;
+  padding: 15px;
+  text-align: center;
+
+}
+.namelap{
+  /* margin-right: 30px; */
+  width: 50%;
+  font-size: 25px;
+}
+.ratelap{
+ width: 50%;
+ font-size: 25px;
+}
+.textar{
+  width: 100%;
+  height:100px;
+  border:solid 1px gray;
+}
+.indiv input{
+ margin-left: 25px;
+ height: 30px;
+ border: none;
+ border-bottom: solid black 2px;
+ border-left: solid black 2px;
+ padding-left: 10px;
+ 
+}
+.indiv input:focus{
+  -webkit-box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+  -moz-box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+  box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+}
+textarea:focus{
+  -webkit-box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+-moz-box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+box-shadow: 1px 2px 15px 1px rgba(108,13,217,1);
+}
+.namein{
+  width:130px;
+}
+.ratein{
+  width:150px;
+}
+#ex1, #ex2, #ex3{
+  text-align: center;
+  z-index: 10;
+}
+li a:focus{
+  -webkit-box-shadow: 11px 9px 23px 5px rgba(12,168,93,0.98);
+  -moz-box-shadow: 11px 9px 23px 5px rgba(12,168,93,0.98);
+  box-shadow: 11px 9px 23px 5px rgba(12,168,93,0.98);
+  transform: scale(1.03);
+}
+#submit{
+    width: 150px;
+    background-color: #3b0a44;
+    font-size: 25px;
+    color: white;
+    border-radius: 5px;
+}
+.indiv{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+.namediv{
+  width: 50%;
+  
+}
+.ratdiv{
+  width: 50%;
+  
+}
+
+
+@media screen and (max-width: 1025px) {
+ 
+  /* .namediv{
+    width: 45%;
+    
+  }
+  .ratdiv{
+    width: 45%;
+    
+  } */
+ 
+}
+@media screen and (max-width: 570px) {
+ 
+  .namediv{
+    width: 50%;
+    margin-right: 0;
+  }
+  .ratdiv{
+    width: 50%;
+    margin-right: 0;
+    
+  }
+  .indiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: left; */
+  
+  }
+  .inside #map{
+    height: calc(100vh - 10em);
+  }
+ 
+}
+@media screen and (max-width: 515px) {
+ 
+  .namediv{
+    width: 50%;
+    margin-right: 0px;
+  }
+  .ratdiv{
+    width: 50%;
+    margin-right: 0;
+    
+  }
+  .indiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: left; */
+  
+  }
+ 
 }
